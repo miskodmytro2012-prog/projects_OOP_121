@@ -1,100 +1,89 @@
-# 01 Початок програми
-print("Програма конвертації введення в ціле число")
-# 03
-# 04
-# 05
-def read_integer():
-# 07
+import math
+
+def try_call_function(module, function_name):
     try:
-# 09
-        value = input("Введіть число: ")
-# 11
-        result = int(value)
-# 13
-        return result
-# 15
-    except ValueError:
-# 17
-        print("Помилка: введені дані не можна конвертувати в ціле число.")
-# 19
+        function = getattr(module, function_name)
+        result = function(16)
+        print("Функція успішно викликана")
+        print("Результат:", result)
+    except AttributeError:
+        print("Помилка: функцію не знайдено")
+    except Exception as error:
+        print("Інша помилка:", error)
+
+def load_module(module_name):
+    try:
+        module = __import__(module_name)
+        return module
+    except ImportError:
+        print("Помилка: модуль не знайдено")
         return None
-# 21
-# 22
-number = read_integer()
-# 24
-if number is not None:
-# 26
-    print("Ви ввели ціле число:", number)
-# 28
-else:
-# 30
-    print("Спробуйте запустити програму ще раз.")
-# 32
-# 33
-# 34
-# 35
-# 36
-# 37
-# 38
-# 39
-# 40
-# 41
-# 42
-# 43
-# 44
-# 45
-# 46
-# 47
-# 48
-# 49
-# 50
-# 51
-# 52
-# 53
-# 54
-# 55
-# 56
-# 57
-# 58
-# 59
-# 60
-# 61
-# 62
-# 63
-# 64
-# 65
-# 66
-# 67
-# 68
-# 69
-# 70
-# 71
-# 72
-# 73
-# 74
-# 75
-# 76
-# 77
-# 78
-# 79
-# 80
-# 81
-# 82
-# 83
-# 84
-# 85
-# 86
-# 87
-# 88
-# 89
-# 90
-# 91
-# 92
-# 93
-# 94
-# 95
-# 96
-# 97
-# 98
-# 99
-# 100 Кінець програми
+
+def main():
+    module_name = "math"
+    function_name = "sqrt"
+    module = load_module(module_name)
+    if module:
+        try_call_function(module, function_name)
+
+value1 = 1
+value2 = 2
+value3 = 3
+value4 = 4
+value5 = 5
+value6 = 6
+value7 = 7
+value8 = 8
+value9 = 9
+value10 = 10
+
+value11 = value1 + value2
+value12 = value3 + value4
+value13 = value5 + value6
+value14 = value7 + value8
+value15 = value9 + value10
+
+value16 = value11 * 2
+value17 = value12 * 2
+value18 = value13 * 2
+value19 = value14 * 2
+value20 = value15 * 2
+
+value21 = value16 - 1
+value22 = value17 - 1
+value23 = value18 - 1
+value24 = value19 - 1
+value25 = value20 - 1
+
+value26 = value21
+value27 = value22
+value28 = value23
+value29 = value24
+value30 = value25
+
+value31 = value26
+value32 = value27
+value33 = value28
+value34 = value29
+value35 = value30
+
+value36 = value31
+value37 = value32
+value38 = value33
+value39 = value34
+value40 = value35
+
+value41 = value36
+value42 = value37
+value43 = value38
+value44 = value39
+value45 = value40
+
+value46 = value41
+value47 = value42
+value48 = value43
+value49 = value44
+value50 = value45
+
+if __name__ == "__main__":
+    main()
